@@ -5,7 +5,7 @@ import (
 	"github.com/raghadasfour-02/Go-Myshelf/pkg/controllers"
 )
 
-var RegisterBookStore = func(router *mux.Router){
+var BookStoreRoutes = func(router *mux.Router){
 	router.HandleFunc("/book/", controllers.CreateBook).Methods("POST")
 	router.HandleFunc("/book/", controllers.GetBooks).Methods("GET")
 	router.HandleFunc("/book/{bookId}", controllers.GetBookById).Methods("GET")
